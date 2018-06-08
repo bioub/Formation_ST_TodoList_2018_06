@@ -71,6 +71,4 @@
       checkbox.checked = checkElt.checked;
     });
   });
-
-
-}(stMicro.dom));
+})(stMicro.dom);

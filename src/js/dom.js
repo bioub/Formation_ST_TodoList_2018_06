@@ -1,5 +1,5 @@
 /* global stMicro */
-(function (global, stMicro) {
+(function(global, stMicro) {
   'use strict';
 
   /**
@@ -37,4 +37,4 @@
   stMicro.dom.append = append;
   stMicro.dom.prepend = prepend;
   stMicro.dom.remove = remove;
-}(window, stMicro));
+})(window, stMicro);
