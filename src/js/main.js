@@ -1,4 +1,6 @@
 import { append, prepend, remove } from './dom';
+import 'core-js/fn/array/from';
+import axios from 'axios';
 
 /**
  * @param {object} todo La todo
@@ -7,12 +9,13 @@ import { append, prepend, remove } from './dom';
  */
 function addTodo(todo) {
   const value = todo.title;
-  // const checked = todo.completed;
+  const checked = todo.completed;
 
   const rowElt = document.createElement('div');
 
   const checkboxElt = document.createElement('input');
   checkboxElt.type = 'checkbox';
+  checkboxElt.checked = checked;
   append(rowElt, checkboxElt); // <div><input type="checkbox"></div>
 
   const rowInputElt = document.createElement('input');
@@ -65,4 +68,10 @@ checkElt.addEventListener('change', () => {
     debug('checkbox change');
   });
   */
+});
+
+axios.get('https://jsonplaceholder.typicode.com/todos').then(({ data }) => {
+  data.slice(0, 10).forEach((todo) => {
+    addTodo(todo);
+  });
 });
