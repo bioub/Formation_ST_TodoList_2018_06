@@ -23,7 +23,7 @@
     "prettier:js": "prettier 'src/js/**/*.js' --write",
     "build:dev": "npm run rm:dist && webpack --mode=development",
     "build:prod": "npm run rm:dist && webpack --mode=production",
-    "serve:dev": "webpack-dev-server --mode=development"
+    "serve:dev": "webpack-dev-server --port 9000 --mode=development"
   },
   "husky": {
     "hooks": {

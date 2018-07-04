@@ -70,7 +70,7 @@ checkElt.addEventListener('change', () => {
   */
 });
 
-axios.get('https://jsonplaceholder.typicode.com/todos').then(({ data }) => {
+axios.get('http://localhost:8080/api/todos').then(({ data }) => {
   data.slice(0, 10).forEach((todo) => {
     addTodo(todo);
   });
