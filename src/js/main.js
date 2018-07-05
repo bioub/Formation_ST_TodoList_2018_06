@@ -28,6 +28,7 @@ function addTodo(todo) {
 
   buttonRemoveElt.addEventListener('click', (event) => {
     remove(event.target.parentElement);
+    //
   });
 
   prepend(divElt, rowElt);
@@ -51,6 +52,7 @@ formElt.addEventListener('submit', (event) => {
     title: inputElt.value,
     completed: false,
   });
+  //
 });
 
 checkElt.addEventListener('change', () => {
